@@ -42,7 +42,10 @@ const App = () => {
         <h1>Phonebook</h1>
         <ContactForm onAddContact={handleAddContact} />
         <SearchBox onFilterChange={handleFilterChange} />
-        <ContactList contacts={filteredContacts} />
+        <ContactList
+          contacts={filteredContacts}
+          onDelete={handleDeleteContact}
+        />
       </div>
     </>
   );

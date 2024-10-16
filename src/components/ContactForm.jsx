@@ -1,7 +1,7 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 
-const ContactForm = ({ onSubmit }) => {
+const ContactForm = ({ onAddContact }) => {
   const initialValues = { name: "", number: "" };
 
   const validationSchema = Yup.object({
@@ -14,7 +14,7 @@ const ContactForm = ({ onSubmit }) => {
       initialValues={initialValues}
       validationSchema={validationSchema}
       onSubmit={(values, { resetForm }) => {
-        onSubmit(values);
+        onAddContact(values);
         resetForm();
       }}
     >
