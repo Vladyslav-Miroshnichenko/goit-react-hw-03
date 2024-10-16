@@ -1,8 +1,8 @@
-const SearchBox = ({ filter, onChange }) => (
+const SearchBox = ({ filter, onFilterChange }) => (
   <input
     type="text"
     value={filter}
-    onChange={onChange}
+    onChange={onFilterChange}
     placeholder="Search contacts"
   />
 );
